@@ -2,7 +2,7 @@
 class BD
 {
     public static $instancia = null;
-    public static function crearConexion()
+    public static function crearInstancia()
     {
         if (!isset(self::$instancia)) {
             $opciones[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
@@ -13,4 +13,3 @@ class BD
         return self::$instancia;
     }
 }
-?>
